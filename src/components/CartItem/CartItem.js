@@ -1,4 +1,3 @@
-import './CartItem.css'
 
 const CartItem = ({ id, name, img, price, quantity, onRemove}) => {
 

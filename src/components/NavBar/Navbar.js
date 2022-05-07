@@ -1,8 +1,7 @@
-import './NavBar.css'
 import CartWidget from '../CartWidget/CartWidget'
 import CartContext from '../../context/CartContext'
-import { Link, NavLink } from 'react-router-dom';
 import { useContext, useEffect, useState } from 'react';
+import { Link, NavLink } from 'react-router-dom';
 import { getCategories } from '../../services/firebase/firestore'
 import { orderCategories } from '../../helpers/NavBarHelper';
 

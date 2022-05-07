@@ -1,5 +1,4 @@
 
-import './Cart.css'
 import CartItem from '../CartItem/CartItem'
 import CartContext from '../../context/CartContext'
 import { useContext, useState } from "react"
