@@ -1,6 +1,6 @@
 # Tienda de Tecnología
 
-Proyecto Final para el curso de ReactJS dictado por Coderhouse (2022). La presenta SPA permite conectarse con un backend realizdo con Firebas, seleccionar productos, navegar a sus detalles, agregarlos al carrito, poder acceder a él y  simular la compra de los productos. Al clickear sobre el botón "realizar compra", pide llenar un formulario con datos básicos y luego de confirmar se genera un id de orden para el usuario y en firebase se guarda la orden con los productos que compró.
+Proyecto Final para el curso de ReactJS dictado por Coderhouse (2022). La presenta SPA permite conectarse con un backend realizdo con Firebas, seleccionar productos, navegar a sus detalles, agregarlos al carrito, poder acceder a él y  simular la compra de los productos. Al clickear sobre el botón **"Finalizar compra"**, pide llenar un formulario con datos básicos y luego de confirmar se genera un id de orden para el usuario y en firebase se guarda la orden con los productos que compró.
 
 
 ## Tecnologías y librerías:
@@ -67,5 +67,9 @@ El backend fue realizado en Firebase, actualmente se encuentra desplegado en un 
 ## Proba la Tienda Online
 Podes probar la tienda accediendo al siguiente link
 `https://tiendacoder.renzovinci.com.ar/`
+
+[Ver versión online](https://tiendacoder.renzovinci.com.ar/)
+
+
 
 
