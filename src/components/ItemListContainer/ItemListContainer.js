@@ -1,10 +1,12 @@
 
+import './ItemListContainer.css'
 import ItemList from '../ItemList/ItemList'
 import { useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { useAsync } from '../../hooks/useAsync'
 import { useNotification } from '../../notification/notification'
 import { getProducts } from '../../services/firebase/firestore'
+import { Container, Spinner } from 'react-bootstrap'
 
 const ItemListContainer = ({ greetings }) => {
     const [products, setProducts] = useState([])
@@ -23,9 +25,10 @@ const ItemListContainer = ({ greetings }) => {
 
     if (loading) {
         return (
-            <>
-                <h1>Cargando...</h1>
-            </>
+            <Container className='d-flex mt-5 justify-content-center'>
+                <Spinner className='me-3' animation="border" variant='primary'/>
+                <h4 className='text-muted'>Obteniendo Productos..</h4>
+            </Container>
         )
     }
 
@@ -34,12 +37,12 @@ const ItemListContainer = ({ greetings }) => {
     }
 
     return (
-        <div className="container">
-            <h4 className='title'>{greetings}</h4>
+        <Container className='ItemListContainer'>
+            <h4 className='text-center m-4'>{greetings}</h4>
             {
-                loading ? <h1 className='loading'>Cargando ...</h1> : <ItemList products={products}></ItemList>
+                !loading && <ItemList products={products}></ItemList>
             }
-        </div>
+        </Container>
     )
 }
 

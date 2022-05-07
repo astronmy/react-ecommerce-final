@@ -4,6 +4,7 @@ import { useContext, useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { getCategories } from '../../services/firebase/firestore'
 import { orderCategories } from '../../helpers/NavBarHelper';
+import { Container, Nav, Navbar } from 'react-bootstrap';
 
 
 
@@ -22,27 +23,29 @@ const NavBar = ({ name }) => {
   }, [])
 
   return (
-    <header className='header'>
-      <Link to='/'>
-        <h1 className='header__title'>{name}</h1>
-      </Link>
-      <div className="menu">
-        {
-          categories.map(cat =>
-            <NavLink
-              key={cat.id}
-              to={`/category/${cat.id}`}
-              className={({ isActive }) => isActive ? 'active' : 'option'}
-            >
-              {cat.description}
-            </NavLink>)
-        }
-      </div>
-      <div>
+    <Navbar bg="dark" className='sticky-top navbar-dark' expand="lg">
+      <Container>
+        <Link className='text-decoration-none text-xs-center' to='/'>
+          <Navbar.Brand className='text-light'>{name}</Navbar.Brand>
+        </Link>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="w-75 w-xs-auto d-flex justify-content-evenly">
+            {
+              categories.map(cat =>
+                <NavLink
+                  key={cat.id}
+                  to={`/category/${cat.id}`}
+                  className={({ isActive }) => isActive ? 'active text-decoration-none' : 'text-light text-decoration-none'}
+                >
+                  {cat.description}
+                </NavLink>)
+            }
+          </Nav>
+        </Navbar.Collapse>
         {getQuantity() > 0 && <CartWidget />}
-      </div>
-
-    </header>
+      </Container>
+    </Navbar>
   )
 
 }

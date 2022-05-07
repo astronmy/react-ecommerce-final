@@ -1,0 +1,7 @@
+.ItemImg{
+  border-radius: 5px;
+  height: 250px;
+  object-fit: cover;
+  object-position: center;
+  width: 250px;
+}

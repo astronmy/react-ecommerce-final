@@ -1,20 +1,22 @@
+import './Item.css'
+import { Card } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
-const Item = ({ id, name, img, price}) => {
+const Item = ({ id, name, img, price }) => {
 
     return (
-        <article className="card">
-            <picture>
-                <img src={img} alt={name} />
-            </picture>
-            <h4 className="card__title">{name}</h4>
-            <div className="card__container">
-                <p className="card__price">{price}</p>
-            </div>
-            <footer>
-                <Link to={`/detail/${id}`} className='Option'>Ver Detalle</Link>
-            </footer>
-        </article>
+        <Card style={{ width: '18rem' }} className="mx-3 my-2 shadow-sm ">
+            <img src={img} className="ItemImg mt-3" alt={name}></img>
+            <Card.Body>
+                <Card.Title className='text-center'>{name}</Card.Title>
+                <Card.Text className='text-center fw-bold fs-3'>
+                    $ {price}
+                </Card.Text>
+                <Link to={`/detail/${id}`} className='btn btn-success'>
+                    Ver Detalle
+                </Link>
+            </Card.Body>
+        </Card>
     )
 
 }
