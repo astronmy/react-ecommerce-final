@@ -25,6 +25,7 @@ const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
         <img src={img} className="ItemDetailImg" alt={name}></img>
         <Card.Body>
           <Card.Text>
+            <h4>Descripción</h4>
             <p className='text-start p-2'>{description}</p>
           </Card.Text>
         </Card.Body>
@@ -33,7 +34,7 @@ const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
       <Card className="mx-1 my-2 shadow-sm col-lg-4 col-11">
         <Card.Body>
           <Card.Title className='text-center fs-2 mt-3 border-bottom p-2'>{name}</Card.Title>
-          <p className='text-center fs-1 p-2'>${price}</p>
+          <p className='text-center fs-1 p-2 border-bottom'>${price}</p>
           {quantity === 0
             ? <ItemCount stock={stock} onAdd={handleOnAdd} />
             : <Link to='/cart' className='btn btn-success col-6 mb-4'>Ir al carrito</Link>

@@ -2,6 +2,7 @@ import ItemDetail from '../ItemDetail/ItemDetail'
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { getProductById } from '../../services/firebase/firestore'
+import { Container, Spinner } from 'react-bootstrap'
 
 const ItemDetailContainer = ({ addToCart, cart }) => {
     const [product, setProduct] = useState()
@@ -23,7 +24,10 @@ const ItemDetailContainer = ({ addToCart, cart }) => {
     }, [productId])
 
     if (loading) {
-        return <h1>Cargando...</h1>
+        return  <Container className='mt-5'>
+                    <Spinner className='me-3' animation="border" variant='primary' />
+                    <h4 className='text-muted'>Cargando Producto..</h4>
+                </Container>
     }
 
     return (

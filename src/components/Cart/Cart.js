@@ -5,6 +5,7 @@ import { useContext, useState } from "react"
 import { useNavigate  } from 'react-router-dom'
 import { useNotification } from '../../notification/notification'
 import { createOrderAndUpdateStock } from '../../services/firebase/firestore'
+import { Container } from 'react-bootstrap'
 
 const Cart = () => {
 
@@ -48,22 +49,22 @@ const Cart = () => {
 
     if (getQuantity() === 0) {
         return (
-            <h1>No hay items en el carrito</h1>
+            <p className='mt-5 fs-2'>No hay items en el carrito</p>
         )
     }
     return (
-        <div>
-            <h1>Carrito</h1>
-            <section className="cart-content">
+        <Container className='mt-5 d-flex flex-column justify-content-center'>
+            <p className='fs-2 mb-4'>Carrito</p>
+            <Container className='justify-self-center'>
                 {cart.map(prod => <CartItem key={prod.id} {...prod} onRemove={removeItem} />)}
-            </section>
-            <h2 className='total__import'>Total: $ {getTotal()}</h2>
-            <div className='buttonbar'>
-                <button className='btnEmpty' onClick={clearCart}>Cancelar Compra</button>
-                <button className='btnEmpty' onClick={() => { navigate('/'); }}>Seguir Comprando</button>
-                <button className='btnEmpty' onClick={createOrder} >Finalizar Compra</button>
+            </Container>
+            <h2 className='mt-4'>Total: $ {getTotal()}</h2>
+            <div className="col-12 col-md-6 btn-group my-4 mx-auto" role="group">
+                <button className='btn btn-danger' onClick={clearCart}>Cancelar Compra</button>
+                <button className='btn btn-success' onClick={() => { navigate('/'); }}>Seguir Comprando</button>
+                <button className='btn btn-secondary' onClick={createOrder} >Finalizar Compra</button>
             </div>
-        </div>
+        </Container>
     )
 }
 

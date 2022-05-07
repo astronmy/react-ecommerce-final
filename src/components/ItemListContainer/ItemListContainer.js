@@ -33,7 +33,7 @@ const ItemListContainer = ({ greetings }) => {
     }
 
     if (products.length === 0) {
-        return <h1>No se encontraron productos!</h1>
+        return <p className='mt-5 fs-2'>No se encontraron productos</p>
     }
 
     return (
