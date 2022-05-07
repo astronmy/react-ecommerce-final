@@ -52,3 +52,20 @@ Para correr el servidor en entorno desarrollo ejecutar el siguiente comando
 
 ## Backend:
 El backend fue realizado en Firebase, actualmente se encuentra desplegado en un firestore que expirará el 22 de Mayo del 2022.
+
+## Screenshots
+
+![image](https://user-images.githubusercontent.com/3026139/167241156-95a0acc7-1e1b-4159-aded-b86575407faa.png)
+![image](https://user-images.githubusercontent.com/3026139/167241172-6ccd9029-2aa3-4afd-a542-60351513a19a.png)
+![image](https://user-images.githubusercontent.com/3026139/167241194-319f9671-6557-4a37-8508-21c404253a8f.png)
+![image](https://user-images.githubusercontent.com/3026139/167241205-daf07e60-0deb-42c5-8a4b-3b931d431b10.png)
+![image](https://user-images.githubusercontent.com/3026139/167241213-3d48e2d9-4400-4905-8a2c-a03eab1742ff.png)
+![image](https://user-images.githubusercontent.com/3026139/167241245-2ea9976e-55a7-4086-8377-0460b673a5c6.png)
+![image](https://user-images.githubusercontent.com/3026139/167241266-4a29f7bb-ead0-48ad-8bbb-807d87eca2d1.png)
+![image](https://user-images.githubusercontent.com/3026139/167241270-84d12aa0-81d8-48bf-a821-f556f300247c.png)
+
+## Proba la Tienda Online
+Podes probar la tienda accediendo al siguiente link
+`https://tiendacoder.renzovinci.com.ar/`
+
+
