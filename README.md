@@ -61,7 +61,6 @@ El backend fue realizado en Firebase, actualmente se encuentra desplegado en un 
 ![image](https://user-images.githubusercontent.com/3026139/167241205-daf07e60-0deb-42c5-8a4b-3b931d431b10.png)
 ![image](https://user-images.githubusercontent.com/3026139/167241213-3d48e2d9-4400-4905-8a2c-a03eab1742ff.png)
 ![image](https://user-images.githubusercontent.com/3026139/167241245-2ea9976e-55a7-4086-8377-0460b673a5c6.png)
-![image](https://user-images.githubusercontent.com/3026139/167241266-4a29f7bb-ead0-48ad-8bbb-807d87eca2d1.png)
 ![image](https://user-images.githubusercontent.com/3026139/167241270-84d12aa0-81d8-48bf-a821-f556f300247c.png)
 
 ## Proba la Tienda Online
@@ -71,7 +70,8 @@ Podes probar la tienda accediendo al siguiente link
 [Ver versión online](https://tiendacoder.renzovinci.com.ar/)
 
 ## Funcionamiento
-![tienda_coder](https://user-images.githubusercontent.com/3026139/167241938-f58963b9-f16b-48eb-bf49-5f2cd58d59ea.gif)
+![tienda_coder2](https://user-images.githubusercontent.com/3026139/167242178-bc111446-a00c-4597-8fd3-a436cd7c74cc.gif)
+
 
 
 
