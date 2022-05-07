@@ -13,7 +13,6 @@ const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
   const { setNotification } = useNotification()
 
   const handleOnAdd = (count) => {
-    console.log('agregue al carrito')
     setQuantity(count)
     addItem({ id, name, price }, count)
     setNotification('success', 'Se agregaron correctamente los productos al carrito')
@@ -24,10 +23,8 @@ const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
       <Card className="mx-1 my-2 shadow-sm col-lg-8 col-11">
         <img src={img} className="ItemDetailImg" alt={name}></img>
         <Card.Body>
-          <Card.Text>
-            <h4>Descripción</h4>
-            <p className='text-start p-2'>{description}</p>
-          </Card.Text>
+          <h4>Descripción</h4>
+          <p className='text-start p-2'>{description}</p>
         </Card.Body>
       </Card>
 

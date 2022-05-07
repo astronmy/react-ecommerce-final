@@ -13,7 +13,7 @@ const CartWidget = () => {
     }
     return(
         <Link to={'/cart'} className="CartWidget text-light text-decoration-none fs-5">
-            <i class="fa-solid fa-cart-shopping text-light"></i>&nbsp;
+            <i className="fa-solid fa-cart-shopping text-light"></i>&nbsp;
             { getQuantity() }
         </Link>
     );

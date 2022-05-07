@@ -19,7 +19,7 @@ export const CartContextProvider = ({ children }) => {
             setCart([...cart, objItemCart])
         }else{
             cart.forEach(prod => {
-                if(prod.id == product.id){
+                if(prod.id === product.id){
                     prod.quantity += quantity
                 }
             })
@@ -27,7 +27,7 @@ export const CartContextProvider = ({ children }) => {
 
     }
     const removeItem = (id) => {
-        setCart(cart.filter(item => (item.id != id)))
+        setCart(cart.filter(item => (item.id !== id)))
     }
 
     const clearCart = () => {
@@ -51,8 +51,6 @@ export const CartContextProvider = ({ children }) => {
 
         return total
     }
-
-
 
     return (
         <Context.Provider value={{

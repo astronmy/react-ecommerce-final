@@ -1,44 +1,46 @@
+import "./notification.css"
 import { useState, createContext, useContext } from 'react'
 
-const Notification = ({ message, severity, otherClass}) => {
+const Notification = ({ message, severity, otherClass }) => {
 
     const notificationStyles = {
-      position: 'absolute',
-      top: 100,
-      right: 5,
-      display: 'flex',
-      justifyContext: 'center',
-      alignItems: 'center',
-      width: 'auto',
-      height: 'auto',
-      padding: '10px 20px 10px 20px',
-      color: 'white',
-    //   backgroundColor: severity === 'success' ? 'green' : 'red',
-      borderRadius: '10px'
+        position: 'fixed',
+        bottom: 10,
+        left: 5,
+        display: 'flex',
+        justifyContext: 'center',
+        alignItems: 'center',
+        width: 'auto',
+        height: 'auto',
+        padding: '20px',
+        color: 'white',
+        backgroundColor: severity === 'success' ? 'green' : 'red',
+        borderRadius: '10px',
+        zIndex:20
     }
-  
-    if(message === '') {
+
+    if (message === '') {
         return null
     }
 
     const config = true ?
-    {
-        style: notificationStyles,
-        className: `${severity === 'success' ? 'Success' : 'Error'} ${otherClass || ''}`
-    } : {}
+        {
+            style: notificationStyles,
+            className: `${severity === 'success' ? 'Success' : 'Error'} ${otherClass || ''}`
+        } : {}
 
-    return(
-      <div {...config}
-        // style={notificationStyles} className={`${severity === 'success' ? 'Success' : 'Error'} ${otherClass || ''}`}
+    return (
+        <div {...config}
+            style={notificationStyles} className={`${severity === 'success' ? 'Success' : 'Error'} ${otherClass || ''}`}
         >
-        {message}
-      </div>
+            {message}
+        </div>
     )
 }
 
 const NotificationContext = createContext()
 
-export const NotificationProvider = ({children}) => {
+export const NotificationProvider = ({ children }) => {
     const [message, setMessage] = useState('')
     const [severity, setSeverity] = useState('success')
     const [otherClass, setOtherClass] = useState()
@@ -53,8 +55,8 @@ export const NotificationProvider = ({children}) => {
     }
 
     return (
-        <NotificationContext.Provider value={{setNotification}}>
-            <Notification message={message} severity={severity} otherClass={otherClass}/>
+        <NotificationContext.Provider value={{ setNotification }}>
+            <Notification message={message} severity={severity} otherClass={otherClass} />
             {children}
         </NotificationContext.Provider>
     )

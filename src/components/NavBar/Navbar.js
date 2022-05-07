@@ -18,7 +18,6 @@ const NavBar = ({ name }) => {
       orderCategories(categories)
       setCategories(categories)
     }).catch(error => {
-      console.log(error)
     })
   }, [])
 

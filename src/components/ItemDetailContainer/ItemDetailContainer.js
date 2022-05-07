@@ -16,7 +16,6 @@ const ItemDetailContainer = ({ addToCart, cart }) => {
         getProductById(productId).then(prod => {
             setProduct(prod)
         }).catch(error => {
-            console.log(error)
         }).finally(() => {
             setLoading(false)
         })
