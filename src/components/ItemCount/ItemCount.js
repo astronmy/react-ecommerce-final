@@ -19,13 +19,13 @@ const ItemCount = ({ initial = 0, stock, onAdd }) => {
     }
 
     return (
-        <div className='item-count'>
-            <div className='item-count__counter'>
-                <button className='btn-discount' onClick={decrement}> - </button>
-                <span className='item-counter'>{count}</span>
-                <button className='btn-increment' onClick={increment}> + </button>
+        <div className='ItemCount'>
+            <div className='ItemCountCounter my-3'>
+                <button className='btn btn-danger' onClick={decrement}> - </button>
+                <span className='fs-5 mx-2'>{count}</span>
+                <button className='btn btn-danger' onClick={increment}> + </button>
             </div>
-            <button className={`btn-add ${(count < 1 ? 'disabled' : '')}`} onClick={() => onAdd(count)}> Agregar </button>
+            <button className={`btn btn-success btn-full ${(count < 1 ? 'disabled' : '')}`} onClick={() => onAdd(count)}> Agregar </button>
         </div>
     )
 }

@@ -28,6 +28,7 @@ const NavBar = ({ name }) => {
         <Link className='text-decoration-none text-xs-center' to='/'>
           <Navbar.Brand className='text-light'>{name}</Navbar.Brand>
         </Link>
+        {getQuantity() > 0 && <CartWidget />}
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="w-75 w-xs-auto d-flex justify-content-evenly">
@@ -43,7 +44,7 @@ const NavBar = ({ name }) => {
             }
           </Nav>
         </Navbar.Collapse>
-        {getQuantity() > 0 && <CartWidget />}
+        
       </Container>
     </Navbar>
   )
