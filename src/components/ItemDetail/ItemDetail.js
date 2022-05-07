@@ -32,11 +32,11 @@ const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
 
       <Card className="mx-1 my-2 shadow-sm col-lg-4 col-11">
         <Card.Body>
-          <Card.Title className='text-center fs-1 mt-3'>{name}</Card.Title>
-          <p className='text-center fs-1'>${price}</p>
+          <Card.Title className='text-center fs-2 mt-3 border-bottom p-2'>{name}</Card.Title>
+          <p className='text-center fs-1 p-2'>${price}</p>
           {quantity === 0
             ? <ItemCount stock={stock} onAdd={handleOnAdd} />
-            : <Link to='/cart' className='btn btn-success'>Ir al carrito</Link>
+            : <Link to='/cart' className='btn btn-success col-6 mb-4'>Ir al carrito</Link>
           }
         </Card.Body>
       </Card>

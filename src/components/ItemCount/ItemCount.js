@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Container } from 'react-bootstrap'
 
 const ItemCount = ({ initial = 0, stock, onAdd }) => {
     const [count, setCount] = useState(initial)
@@ -19,14 +20,14 @@ const ItemCount = ({ initial = 0, stock, onAdd }) => {
     }
 
     return (
-        <div className='ItemCount'>
-            <div className='ItemCountCounter my-3'>
-                <button className='btn btn-danger' onClick={decrement}> - </button>
+        <Container>
+            <div className='my-3'>
+                <button className='btn btn-secondary' onClick={decrement}> - </button>
                 <span className='fs-5 mx-2'>{count}</span>
-                <button className='btn btn-danger' onClick={increment}> + </button>
+                <button className='btn btn-secondary' onClick={increment}> + </button>
             </div>
-            <button className={`btn btn-success btn-full ${(count < 1 ? 'disabled' : '')}`} onClick={() => onAdd(count)}> Agregar </button>
-        </div>
+            <button className={`btn btn-secondary col-lg-6 col-5 btn-full ${(count < 1 ? 'btn-disabled' : '')}`} onClick={() => onAdd(count)}> Agregar </button>
+        </Container>
     )
 }
 export default ItemCount

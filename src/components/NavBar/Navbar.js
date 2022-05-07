@@ -28,7 +28,9 @@ const NavBar = ({ name }) => {
         <Link className='text-decoration-none text-xs-center' to='/'>
           <Navbar.Brand className='text-light'>{name}</Navbar.Brand>
         </Link>
+
         {getQuantity() > 0 && <CartWidget />}
+        
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="w-75 w-xs-auto d-flex justify-content-evenly">
@@ -37,14 +39,14 @@ const NavBar = ({ name }) => {
                 <NavLink
                   key={cat.id}
                   to={`/category/${cat.id}`}
-                  className={({ isActive }) => isActive ? 'active text-decoration-none' : 'text-light text-decoration-none'}
+                  className={({ isActive }) => isActive ? 'active text-decoration-none my-3' : 'text-light text-decoration-none my-3 text-center'}
                 >
                   {cat.description}
                 </NavLink>)
             }
           </Nav>
         </Navbar.Collapse>
-        
+
       </Container>
     </Navbar>
   )
