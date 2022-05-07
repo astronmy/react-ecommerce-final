@@ -70,6 +70,9 @@ Podes probar la tienda accediendo al siguiente link
 
 [Ver versión online](https://tiendacoder.renzovinci.com.ar/)
 
+## Funcionamiento
+![tienda_coder](https://user-images.githubusercontent.com/3026139/167241938-f58963b9-f16b-48eb-bf49-5f2cd58d59ea.gif)
+
 
 
 
